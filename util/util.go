@@ -13,6 +13,13 @@ func GetFileContent(path string) ([]byte, error) {
 	return ioutil.ReadFile(path)
 }
 
-// func CalcRewardPoints(data PurchaseData) float64 {
-// 	return 0.0
-// }
+func CalcRewardPoints(amount float64) int {
+	if amount <= 50.0 {
+		return 0
+	}
+	if amount > 50.0 && amount <= 100 {
+		return int(amount - 50.0)
+	}
+
+	return int((amount-100.0))*2 + 50
+}

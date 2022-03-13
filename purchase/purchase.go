@@ -2,6 +2,7 @@ package purchase
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"time"
 
@@ -32,7 +33,6 @@ func GetCustomerWisePurchaseData(path string) map[string][]PurchaseData {
 		return customerMap
 	}
 	for _, record := range data {
-		log.Println(record, "record")
 		purchaseData := customerMap[record.CustomerName]
 		if len(purchaseData) == 0 {
 			purchaseData = make([]PurchaseData, 0)
@@ -41,4 +41,17 @@ func GetCustomerWisePurchaseData(path string) map[string][]PurchaseData {
 		customerMap[record.CustomerName] = purchaseData
 	}
 	return customerMap
+}
+
+func GetMonthWiseRewards(data []PurchaseData) map[string]int {
+
+	months := []string{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}
+	monthWiseRewards := make(map[string]int)
+
+	for _, purchase := range data {
+		month := months[int(purchase.TransactionDate.Month())]
+		key := fmt.Sprintf("%s'%d", month, purchase.TransactionDate.Year())
+		monthWiseRewards[key] += util.CalcRewardPoints(purchase.TransactionAmount)
+	}
+	return monthWiseRewards
 }

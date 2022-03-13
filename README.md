@@ -13,9 +13,10 @@ Check solution into GitHub
 
 ## ABOUT CODING
 
-Written a separate package for movies and reviews with the structure, Written an utility for reading the content from the files.
+Prepared a test data for customer purchase details in the `purchase_details.json`, Provide the sample/customized data as a file.
+Written a  separate package for fetching the purchase details from file and for calculating the monthly wise reward points.
 
-Tweet functionality is independent, so that we can use it without reading it from file as well. written utilities for deriving the rating and movie title based on with and without trim flags
+Added test cases as well and The coverage report: 100.0% of statements
 
 ## Running the application
 
@@ -31,9 +32,28 @@ Pass the purchase history data in a  json file with the below format for each cu
 - transaction_date      timestamp       Transaction time in ISO8601 / RFC3339 format
 - transaction_amount    float64         Transaction amount
 
-To run the application pass the purchase_details file path
+To run the application with sample the purchase_details file path
+
+`go run main.go`
+
+To run the application with custom the purchase_details file path
 
 `go run main.go purchase_details.json`
+
+## OUTPUT
+
+Sample Output will be in the below format
+
+Reward point Summary Of Customer:John
+Feb'2022 : 500
+Mar'2022 : 1400
+Apr'2022 : 1050
+Total Reward points: 2950
+Reward point Summary Of Customer:Diana
+Feb'2022 : 152
+Mar'2022 : 354
+Apr'2022 : 1906
+Total Reward points: 2412
 
 ## Running all Test Cases
 
@@ -42,7 +62,3 @@ go test -v ./...
 ## Test Coverage Command line
 
 go test -v ./... -cover
-
-## Specific test
-
-go clean -testcache && go test -run TestGetTweetWithNoMovie -v gitlab.com/99designs-coding-test/tweet
