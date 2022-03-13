@@ -1,0 +1,73 @@
+[
+  {
+    "customer_name": "John",
+    "transaction_date": "2022-01-01T12:00:14.052975+05:30",
+    "transaction_amount": 150.1
+  },
+  {
+    "customer_name": "John",
+    "transaction_date": "2022-01-05T22:00:14.052975+05:30",
+    "transaction_amount": 50.0
+  },
+  {
+    "customer_name": "John",
+    "transaction_date": "2022-01-10T14:00:14.052975+05:30",
+    "transaction_amount": 15.4
+  },
+  {
+    "customer_name": "John",
+    "transaction_date": "2022-01-21T02:00:14.052975+05:30",
+    "transaction_amount": 250.0
+  },
+  {
+    "customer_name": "John",
+    "transaction_date": "2022-02-03T03:00:14.052975+05:30",
+    "transaction_amount": 350.0
+  },
+  {
+    "customer_name": "John",
+    "transaction_date": "2022-02-14T09:00:14.052975+05:30",
+    "transaction_amount": 500.0
+  },
+  {
+    "customer_name": "John",
+    "transaction_date": "2022-03-08T12:00:14.052975+05:30",
+    "transaction_amount": 600.0
+  },
+
+  {
+    "customer_name": "Diana",
+    "transaction_date": "2022-01-08T12:00:14.052975+05:30",
+    "transaction_amount": 50.2
+  },
+  {
+    "customer_name": "Diana",
+    "transaction_date": "2022-01-15T22:00:14.052975+05:30",
+    "transaction_amount": 5.0
+  },
+  {
+    "customer_name": "Diana",
+    "transaction_date": "2022-01-20T14:00:14.052975+05:30",
+    "transaction_amount": 151.4
+  },
+  {
+    "customer_name": "Diana",
+    "transaction_date": "2022-02-21T02:00:14.052975+05:30",
+    "transaction_amount": 252.2
+  },
+  {
+    "customer_name": "Diana",
+    "transaction_date": "2022-03-03T03:00:14.052975+05:30",
+    "transaction_amount": 503.0
+  },
+  {
+    "customer_name": "Diana",
+    "transaction_date": "2022-03-14T09:00:14.052975+05:30",
+    "transaction_amount": 45.0
+  },
+  {
+    "customer_name": "Diana",
+    "transaction_date": "2022-03-18T12:00:14.052975+05:30",
+    "transaction_amount": 600.0
+  }
+]
